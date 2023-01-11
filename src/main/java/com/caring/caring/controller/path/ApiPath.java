@@ -12,4 +12,8 @@ public class ApiPath {
 
     public static final String SETELDER = "/editElder";
 
+    public static final String SETPASSWORD = "/setPassword/{password}";
+
+    public static final String GETPASSWORD = "/getPassword";
+
 }
