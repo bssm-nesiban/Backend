@@ -15,6 +15,8 @@ import javax.validation.Valid;
 @RequiredArgsConstructor
 public class CaringController {
 
+    private String password;
+
     private final CaringService caringService;
 
     @GetMapping(ApiPath.START)
@@ -48,6 +50,18 @@ public class CaringController {
             @Valid @RequestBody Elder elder
     ) {
         caringService.editElder(elder);
+    }
+
+    @PostMapping(ApiPath.SETPASSWORD)
+    public void setPassword(
+            @PathVariable String password
+    ) {
+        this.password = password;
+    }
+
+    @GetMapping(ApiPath.GETPASSWORD)
+    public String getPassword() {
+        return this.password;
     }
 
 }
