@@ -31,7 +31,7 @@ public class CaringController {
         return caringService.signup(signup);
     }
 
-    @GetMapping(ApiPath.LOGIN)
+    @PostMapping(ApiPath.LOGIN)
     public boolean login(
             @Valid @RequestBody Login login
     ) {
